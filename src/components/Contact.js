@@ -31,7 +31,7 @@ const Contact = () => {
     e.preventDefault();
     const errors = validate();
     setFormErrors(errors);
-
+  
     if (Object.keys(errors).length === 0) {
       emailjs.send(
         process.env.REACT_APP_EMAILJS_SERVICE_ID,
@@ -45,13 +45,17 @@ const Contact = () => {
       )
       .then((response) => {
         setSuccessMessage("Message sent successfully!");
+        setErrorMessage('');
         setFormData({ name: '', email: '', message: '' });
+        console.log('Email successfully sent:', response);
       })
       .catch((err) => {
         setErrorMessage("Failed to send message. Please try again.");
+        console.error('Email sending failed:', err);
       });
     }
   };
+  
 
   return (
     <div className="contact-container">
