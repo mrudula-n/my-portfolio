@@ -1,0 +1,113 @@
+/* src/styles/Skills.css */
+.skills-container {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  padding: 40px;
+  background-color: transparent;
+  gap: 30px;
+  min-height: calc(100vh - 160px);
+  flex-wrap: wrap; 
+}
+
+.skills-card {
+  background: rgba(58, 63, 71, 0.7); 
+  border-radius: 15px;
+  padding: 30px;
+  width: 30%; 
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+  color: white;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.know-more-btn {
+  background-color: #61dafb;
+  border: none;
+  color: #282c34;
+  padding: 10px 15px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: block;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.short-description {
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: #c0c0c0; 
+}
+
+/* Modal styling */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-card {
+  background-color: #282c34;
+  padding: 30px;
+  border-radius: 15px;
+  width: 600px;
+  max-height: 80vh;
+  overflow-y: auto; 
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+.close-btn {
+  background-color: #61dafb;
+  color: #282c34;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+/* Skill list in modal */
+.skills-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.skill-card {
+  background-color: #1f2227;
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.skill-icon {
+  font-size: 30px;
+  color: #61dafb;
+}
+
+.skill-content {
+  text-align: left;
+}
+
+.skill-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.skill-description {
+  font-size: 14px;
+  color: #c0c0c0;
+}

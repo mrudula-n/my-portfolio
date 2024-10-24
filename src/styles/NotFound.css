@@ -1,0 +1,22 @@
+/* src/styles/NotFound.css */
+.not-found-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh; 
+    background-color: #282c34;
+    color: #61dafb;
+    text-align: center;
+  }
+  
+  .not-found-container h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .not-found-container p {
+    font-size: 18px;
+    color: #ffffff;
+  }
+  

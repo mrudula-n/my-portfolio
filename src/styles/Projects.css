@@ -1,0 +1,78 @@
+/* src/styles/Projects.css */
+.projects-container {
+    padding: 40px;
+    background-color: #282c34;
+    color: #ffffff;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .projects-heading {
+    font-size: 36px;
+    color: #61dafb;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  /* Accordion Styling */
+  .accordion {
+    width: 80%;
+    background-color: #3a3f47;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .accordion-item {
+    padding: 20px;
+    border-bottom: 1px solid #2e3138;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .accordion-item:hover {
+    background-color: #333940;
+  }
+  
+  .accordion-title {
+    font-size: 20px;
+    color: #61dafb;
+    font-weight: bold;
+  }
+  
+  .accordion-content {
+    padding-top: 15px;
+    font-size: 16px;
+    color: #faf5f5;
+  }
+  
+  .accordion-content p {
+    margin: 10px 0;
+  }
+
+  .accordion-content p strong {
+    color: #61dafb;
+  }
+  
+  .project-highlights {
+    list-style: disc;
+    padding-left: 20px;
+  }
+  
+  .project-highlights li {
+    margin: 5px 0;
+  }
+  
+  /* Transition for smooth expand/collapse */
+  .accordion-item.open .accordion-content {
+    max-height: 1000px;
+    transition: max-height 0.5s ease-in;
+  }
+  
+  .accordion-item .accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+  }
+  

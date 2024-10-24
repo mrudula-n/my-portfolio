@@ -1,0 +1,83 @@
+/* src/styles/Header.css */
+header {
+  background-color: #282c34;
+  display: flex;
+  padding: 20px;
+  padding-top: 30px;
+  justify-content: space-between; 
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  margin-left: 70px;
+}
+
+.logo {
+  text-decoration: none;
+  color: #61dafb; 
+  font-weight: bold;
+  font-size: 22px;
+  transition: color 0.3s;
+  margin-right: 30px; 
+}
+
+.logo:hover {
+  color: white; 
+}
+
+.header-right {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+  margin-right: 70px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #61dafb; 
+  font-weight: bold;
+  font-size: 18px;
+  transition: color 0.3s; 
+  display: inline-block;
+  position: relative;
+}
+
+.letter {
+  display: inline-block;
+  transition: color 0.3s, transform 0.3s ease;
+  opacity: 1; 
+}
+
+.nav-link:hover {
+  color: white; 
+  transform: scale(1.5); 
+}
+
+.nav-link:hover .letter {
+  animation: appear 0.3s ease forwards;
+  animation-delay: calc(0.05s * var(--i));
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
