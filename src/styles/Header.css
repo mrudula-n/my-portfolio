@@ -1,83 +1,128 @@
-/* src/styles/Header.css */
+/* Header styling */
 header {
   background-color: #282c34;
-  display: flex;
   padding: 20px;
-  padding-top: 30px;
-  justify-content: space-between; 
-  align-items: center;
   width: 100%;
   box-sizing: border-box;
+  overflow: hidden; /* Prevent content overflow */
+  position: relative;
+  z-index: 10; /* Keep header above other elements */
 }
 
+/* Header navigation container */
 .header-nav {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
 }
 
+/* Left side of the header with date display */
 .header-left {
-  display: flex;
-  align-items: center;
-  margin-left: 70px;
+  flex: 1;
+  padding-left: 20px; /* Move date and day slightly to the right */
 }
 
-.logo {
-  text-decoration: none;
-  color: #61dafb; 
+.date-display, .date-display .weekday  {
+  text-align: left;
+  color: #61dafb;
+  font-size: 18px;
   font-weight: bold;
-  font-size: 22px;
-  transition: color 0.3s;
-  margin-right: 30px; 
+  line-height: 1.2;
 }
 
-.logo:hover {
-  color: white; 
-}
-
+/* Right side of the header with navigation links */
 .header-right {
   display: flex;
+  align-items: center;
+  padding-right: 20px; /* Move navigation links slightly to the left */
+}
+
+/* Hamburger menu button */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  color: #61dafb;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Navigation links */
+.nav-links {
+  display: flex;
+  gap: 20px;
   list-style: none;
-  gap: 30px;
   margin: 0;
   padding: 0;
-  margin-right: 70px;
 }
 
+/* Navigation link effect */
+/* Navigation link effect */
 .nav-link {
   text-decoration: none;
-  color: #61dafb; 
+  color: #61dafb;
   font-weight: bold;
   font-size: 18px;
-  transition: color 0.3s; 
-  display: inline-block;
-  position: relative;
+  transition: color 0.3s ease;
 }
 
-.letter {
-  display: inline-block;
-  transition: color 0.3s, transform 0.3s ease;
-  opacity: 1; 
-}
-
+/* Hover effect for navigation links */
 .nav-link:hover {
-  color: white; 
-  transform: scale(1.5); 
+  color: #ffffff;
+  text-decoration: underline; /* Add underline on hover */
 }
 
-.nav-link:hover .letter {
-  animation: appear 0.3s ease forwards;
-  animation-delay: calc(0.05s * var(--i));
-}
 
-@keyframes appear {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
+/* Mobile menu styling */
+@media (max-width: 768px) {
+  /* Hide the regular navigation links and show hamburger */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: #282c34;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    width: 100%;
+    position: relative;
+    margin-top: 10px; /* Adds space between header and menu */
   }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
+
+  /* Show nav links when menu is open */
+  .nav-links.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block; /* Show hamburger icon on mobile */
+  }
+
+  .header-nav {
+    flex-direction: column;
+  }
+
+  .header-left {
+    margin-bottom: 10px;
+  }
+
+  .nav-link {
+    font-size: 16px;
+  }
+}
+
+/* Adjustments for very small screens */
+@media (max-width: 480px) {
+  .date-display {
+    font-size: 16px;
+  }
+
+  .date-display .weekday {
+    font-size: 14px;
+  }
+
+  .nav-link {
+    font-size: 14px;
   }
 }

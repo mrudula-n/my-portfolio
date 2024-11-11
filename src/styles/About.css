@@ -88,3 +88,16 @@
   width: 2px;
   background-color: #61dafb;
 }
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;
+    gap: 30px; /* Adjust gap between sections */
+  }
+
+  .about-left, .about-right {
+    max-width: 100%; /* Take full width on smaller screens */
+  }
+}

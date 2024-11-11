@@ -2,7 +2,7 @@
 import React from 'react';
 import '../styles/Footer.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faLinkedin, faInstagram, faFacebook, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faLinkedin, faInstagram, faFacebook } from '@fortawesome/free-brands-svg-icons';
 
 const Footer = () => {
   return (
@@ -21,9 +21,6 @@ const Footer = () => {
           </a>
           <a href="https://www.facebook.com/saimrudula.nomula.7" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faFacebook} /> Facebook
-          </a>
-          <a href="https://x.com/sai_mrudula_3" target="_blank" rel="noopener noreferrer">
-            <FontAwesomeIcon icon={faTwitter} /> Twitter
           </a>
         </div>
       </div>

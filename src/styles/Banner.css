@@ -9,6 +9,7 @@
   flex: 1; 
   gap: 150px; 
   background-color: #282c34; 
+  flex-direction: row;
 }
 
 /* Image Container with Circular Frame */
@@ -68,4 +69,36 @@
   color: #aaaaaa; 
   line-height: 1.6;
   margin: 15px 0 0;
+}
+
+/* Responsive Media Query */
+@media (max-width: 768px) {
+  .banner {
+    flex-direction: column; /* Stack image on top of text */
+    gap: 30px; /* Reduce gap between image and content */
+  }
+
+  .banner-image {
+    width: 200px; /* Smaller image size on smaller screens */
+    height: 200px;
+  }
+
+  .border-circle {
+    width: 230px;
+    height: 230px;
+  }
+
+  .description-card {
+    text-align: center; /* Center-align text on smaller screens */
+    max-width: 100%; /* Allow card to take full width */
+    padding: 0 20px; /* Add some padding */
+  }
+
+  .description-card h1 {
+    font-size: 28px; /* Slightly smaller heading */
+  }
+
+  .intro, .description {
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
 }

@@ -9,33 +9,7 @@ body, html {
   background-color: #282c34;
   overflow-y: auto; 
   overflow-x: hidden; 
-  cursor: none;
 }
-
-/* Custom Cursor Styling */
-.custom-cursor {
-  width: 10px; 
-  height: 10px;
-  background-color: #61dafb; 
-  border-radius: 50%;
-  position: fixed;
-  pointer-events: none; 
-  z-index: 9999;
-  transition: transform 0.1s ease; 
-}
-
-/* Circle around the cursor */
-.custom-cursor-circle {
-  width: 30px; 
-  height: 30px;
-  border: 2px solid #61dafb; 
-  border-radius: 50%;
-  position: fixed;
-  pointer-events: none;
-  z-index: 9998;
-  transition: transform 0.15s ease; 
-}
-
 
 /* Hide scrollbars but allow scrolling */
 body::-webkit-scrollbar {
